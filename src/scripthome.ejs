@@ -1,4 +1,10 @@
 <%- include('partials/head'); -%>
 <h1><%=scriptdata.title%></h1>
-<p>script index</p>
+<h2>Call your reps</h2>
+<ul>
+<% electeds.forEach(elected => {%>
+<li><a href="<%=elected.lastName.toLowerCase()%>"><%=elected.firstName%> <%=elected.lastName%></a></li>
+<%}); %>
+</ul>
+<%-scriptdata.issueHtml%>
 <%- include('partials/foot'); -%>

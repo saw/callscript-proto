@@ -3,6 +3,7 @@
     "firstName": "Kamala",
     "salutation": "Senator",
     "pronoun": "she/her",
+    "party": "Democrat",
     "primaryOffice": {
        "phone": "(202) 224 - 3553",
        "street": "112 Hart Senate Office Building",
@@ -13,12 +14,12 @@
     },
     "otherOffices":[
        {
-        "phone": "(415) 981 - 9369",
-        "street": "333 Bush Street",
-        "street2": "Suite 3225",
-        "city": "San Francisco",
-        "state": "CA",
-        "zip": 95814
+            "phone": "(415) 981 - 9369",
+            "street": "333 Bush Street",
+            "street2": "Suite 3225",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": 95814
        },
        {
            "phone": "(916) 448 - 2787",
