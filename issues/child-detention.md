@@ -1,7 +1,7 @@
 ---
-title: Detention Oversight, Not Expansion Act  
-date: 2017-06-17  
-office: Senate  
+title: Detention Oversight, Not Expansion Act
+date: 2017-06-17
+office: Senate
 ---
 
 In a recent statement the United Nations human rights office declared that separating children from migrant families entering the United States [violates their rights and international law](https://www.nytimes.com/2018/06/05/world/americas/us-un-migrant-children-families.html). Ravina Shamdasani, spokeswoman for the Office of the United Nations High Commissioner for Human Rights, stated that “[this practice]amounts to arbitrary and unlawful interference in family life, and is a serious violation of the rights of the child.”
