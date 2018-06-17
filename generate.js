@@ -13,11 +13,6 @@ const scriptList = [];
 
 // async, but has no callback
 function render(tmpl, data, path) {
-    if(data.scriptdata) {
-        console.log('-----');
-        console.log(data.scriptdata.html);
-    }
-    
     ejs.renderFile(tmpl, data, (err, str) => {
         if(err) {
             console.error(err);
@@ -46,18 +41,17 @@ scripts.forEach(script => {
     scriptdata.name = script.replace(/\.md/,'');
     scriptdata.issueHtml = issueData[scriptdata.issue + '.md'].html;
     scriptList.push(scriptdata);
-    render('src/scripthome.ejs', {scriptdata, electeds}, `./dist/${scriptdata.name}/index.html`);
-
+});
+scriptList.forEach(scriptdata => {
+    render('src/scripthome.ejs', {scriptdata, electeds, title: scriptdata.title, scriptList}, `./dist/${scriptdata.name}/index.html`);   
     electeds.forEach(elected => {
         let name = elected.lastName.toLowerCase();
         let script = JSON.parse(JSON.stringify(scriptdata));
         script.html = scriptdata.html.replace('{{full_name}}', `${elected.salutation} ${elected.lastName}`);
-        console.log(elected.lastName);
-        render('src/script.ejs', {scriptdata:script, elected}, `./dist/${scriptdata.name}/${name}/index.html`);
+        render('src/script.ejs', {title: script.title, scriptdata:script, elected, scriptList}, `./dist/${scriptdata.name}/${name}/index.html`);
     });
-    
 });
-ejs.renderFile('src/index.ejs',{issueList, scriptList, electeds}, (err, str) => {
+ejs.renderFile('src/index.ejs',{title: 'Call script prototype', issueList, scriptList, electeds}, (err, str) => {
     if(err) {
         console.error(err);
     } else {

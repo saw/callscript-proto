@@ -1,6 +1,5 @@
 <%- include('partials/head'); -%>
+
 <h1>ISF Call script generator prototype</h1>
-<% scriptList.forEach(script => { %>
-<p><a href="/<%=script.name%>"><%=script.title%></a></p>
-<%});%>
+<%- include('partials/scriptlist'); -%>
 <%- include('partials/foot'); -%>
