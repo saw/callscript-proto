@@ -1,0 +1,32 @@
+[{
+    "lastName": "Harris",
+    "firstName": "Kamala",
+    "salutation": "Senator",
+    "pronoun": "she/her",
+    "primaryOffice": {
+       "phone": "(202) 224 - 3553",
+       "street": "112 Hart Senate Office Building",
+       "street2":"",
+       "city": "washington",
+       "state": "DC",
+       "zip": 20510
+    },
+    "otherOffices":[
+       {
+        "phone": "(415) 981 - 9369",
+        "street": "333 Bush Street",
+        "street2": "Suite 3225",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": 95814
+       },
+       {
+           "phone": "(916) 448 - 2787",
+           "street": "501 I Street",
+           "street2": "Suite 7-800",
+           "city": "Sacramento",
+           "state": "CA",
+           "zip": 95814
+       }
+    ]
+}]
