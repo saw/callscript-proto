@@ -4,7 +4,7 @@ const path = require('path');
 const ejs = require('ejs');
 const converter = new showdown.Converter({metadata: true});
 const electeds = JSON.parse(fs.readFileSync('data/electeds.json', {encoding:'utf8'}));
-console.log(electeds);
+// console.log(electeds);
 const issues = fs.readdirSync('./issues');
 const scripts = fs.readdirSync('./scripts');
 let issueData = {};
@@ -13,6 +13,11 @@ const scriptList = [];
 
 // async, but has no callback
 function render(tmpl, data, path) {
+    if(data.scriptdata) {
+        console.log('-----');
+        console.log(data.scriptdata.html);
+    }
+    
     ejs.renderFile(tmpl, data, (err, str) => {
         if(err) {
             console.error(err);
@@ -45,8 +50,10 @@ scripts.forEach(script => {
 
     electeds.forEach(elected => {
         let name = elected.lastName.toLowerCase();
-        scriptdata.html = scriptdata.html.replace('{{full_name}}', `${elected.salutation} ${elected.lastName}`);
-        render('src/script.ejs', {scriptdata, elected}, `./dist/${scriptdata.name}/${name}/index.html`);
+        let script = JSON.parse(JSON.stringify(scriptdata));
+        script.html = scriptdata.html.replace('{{full_name}}', `${elected.salutation} ${elected.lastName}`);
+        console.log(elected.lastName);
+        render('src/script.ejs', {scriptdata:script, elected}, `./dist/${scriptdata.name}/${name}/index.html`);
     });
     
 });

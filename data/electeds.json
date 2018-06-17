@@ -2,7 +2,7 @@
     "lastName": "Harris",
     "firstName": "Kamala",
     "salutation": "Senator",
-    "pronoun": "she/her",
+    "pronoun": "she",
     "party": "Democrat",
     "primaryOffice": {
        "phone": "(202) 224 - 3553",
@@ -28,6 +28,23 @@
            "city": "Sacramento",
            "state": "CA",
            "zip": 95814
+       }
+    ]
+},
+{
+    "lastName": "Feinstein",
+    "firstName": "Dianne",
+    "salutation": "Senator",
+    "pronoun": "she",
+    "party": "Democrat",
+    "primaryOffice": {
+        "phone": "202-224-3841"
+    },
+    "otherOffices": [
+       {
+           "phone": "415-393-0707",
+           "city": "San Francisco",
+           "state": "CA"
        }
     ]
 }]
