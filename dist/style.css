@@ -364,3 +364,22 @@
       padding: 15px;
       background: #ccc;
   }
+
+  .script {
+      display: flex;
+  }
+
+  .script blockquote {
+    flex-grow: 2;   
+  }
+
+  .script .elected {
+      flex-grow: 1;
+  }
+  .script .elected .phone {
+      white-space: nowrap;
+      font-size: 30px;
+      text-decoration: none;
+      color: red;
+      font-weight: bolder;
+  }

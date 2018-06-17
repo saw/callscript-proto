@@ -1,9 +1,11 @@
 <%- include('partials/head'); -%>
 <h1><%=scriptdata.title%></h1>
+<div class="script">
 <%- include('partials/electedinfo'); -%>
 <blockquote>
     <%-scriptdata.html%>
 </blockquote>
+</div>
 <h2>Background</h2>
 <%-scriptdata.issueHtml-%>
 <%- include('partials/foot'); -%>
