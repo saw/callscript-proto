@@ -1,7 +1,7 @@
 <%- include('partials/head'); -%>
 <h1>hello</h1>
-<% issueList.forEach(issue => { %>
-<p><%=issue.title%></p>
+<% scriptList.forEach(script => { %>
+<p><a href="/<%=script.name%>"><%=script.title%></a></p>
 <%});%>
 
 <%- include('partials/foot'); -%>
