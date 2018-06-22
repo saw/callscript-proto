@@ -29,6 +29,6 @@ collections:
         widget: 'relation'
         collection: 'issues'
         searchFields: ['title', 'name']
-        valueField: 'name'
+        valueField: 'title'
         displayFields: ['title']
       - {label: "Body", name: "body", widget: "markdown"}

@@ -29,7 +29,7 @@ issues.forEach(issue => {
     const html = converter.makeHtml(fs.readFileSync(path.join(__dirname,'issues',issue),{encoding:'utf8'}));
     const out = converter.getMetadata();
     out.html = html;
-    issueData[issue] = out;
+    issueData[issue.replace(/\d{4}-\d{2}-\d{2}-/,'')] = out;
     out.id = issue;
     issueList.push(out);
 });
