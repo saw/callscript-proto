@@ -2,6 +2,7 @@
 title: Vote NO on extreme alt-right Britt Grant for a lifetime appointment to the federal appeals court.
 date: 2017-06-17
 office: Senate
+name: britt-grant
 ---
 
 Britt Grant has been nominated by Trump for a lifetime judgeship to the federal appeals court. She has a troubling record of far right wing views. As a lawyer Grant has opposed:

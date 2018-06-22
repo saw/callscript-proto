@@ -11,6 +11,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Office"
         name: "office"
@@ -24,10 +25,10 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - label: "Issue"
-          name: "issue"
-          widget: 'relation'
-          collection: 'issues'
-          searchFields: ['title']
-          valueField: 'title'
-          displayFields: ['title']
+        name: "issue"
+        widget: 'relation'
+        collection: 'issues'
+        searchFields: ['title', 'name']
+        valueField: 'name'
+        displayFields: ['title']
       - {label: "Body", name: "body", widget: "markdown"}
