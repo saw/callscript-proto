@@ -16,3 +16,18 @@ collections:
         name: "office"
         widget: "select"
         options: ["Senate", "House"]
+  - name: 'scripts'
+    label: 'Scripts'
+    folder: 'scripts',
+    create: true,
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Issue".
+        name: "issue",
+        widget: 'relation',
+        collection: 'issues',
+        searchFields: ['name'],
+        valueField: 'name',
+        displayFields: ['title']
