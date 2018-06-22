@@ -1,6 +1,6 @@
 ---
 title: Test Script
-issue: child-detention
+issue: test-issue
 ---
 # Awesome script
 
