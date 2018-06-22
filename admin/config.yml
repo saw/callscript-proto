@@ -3,6 +3,9 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "dist/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads"
+slug:
+  encoding: "ascii",
+  clean_accents: true
 collections:
   - name: 'issues'
     label: 'Issues'
@@ -28,7 +31,7 @@ collections:
         name: "issue"
         widget: 'relation'
         collection: 'issues'
-        searchFields: ['title', 'name']
+        searchFields: ['title']
         valueField: 'title'
         displayFields: ['title']
       - {label: "Body", name: "body", widget: "markdown"}

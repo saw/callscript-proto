@@ -1,5 +1,5 @@
 ---
 title: test script
-issue: test
+issue:  Test issue
 ---
 This is a test script
