@@ -23,11 +23,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - label: "Issue"
-        name: "issue"
-        widget: 'relation'
-        collection: 'issues'
-        searchFields: ['title']
-        valueField: 'title'
-        displayFields: ['title']
+          name: "issue"
+          widget: 'relation'
+          collection: 'issues'
+          searchFields: ['title']
+          valueField: 'title'
+          displayFields: ['title']
+      - {label: "Body", name: "body", widget: "markdown"}
