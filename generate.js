@@ -15,7 +15,7 @@ const ucsChars = /[\xA0-\u{D7FF}\u{F900}-\u{FDCF}\u{FDF0}-\u{FFEF}\u{10000}-\u{1
 const validURIChar = char => uriChars.test(char);
 const validIRIChar = char => uriChars.test(char) || ucsChars.test(char);
 
-function sanitizeURI(str, { replacement = "-", encoding = "unicode" } = {}) {
+function sanitizeURI(str, { replacement = "", encoding = "unicode" } = {}) {
 
 
     let validChar;
@@ -67,8 +67,8 @@ scripts.forEach(script => {
     scriptdata.html = html;
     scriptdata.name = script.replace(/\.md/,'');
     console.log('od', issueData);
-    
-    scriptdata.issueHtml = issueData[sanitizeURI(scriptdata.issue) + '.md'].html;
+    console.log(scriptdata.issue, sanitizeURI(scriptdata.issue));
+    scriptdata.issueHtml = issueData[sanitizeURI(scriptdata.issue.replace(/\s/g,'-')) + '.md'].html;
     scriptList.push(scriptdata);
 });
 scriptList.forEach(scriptdata => {
