@@ -60,3 +60,4 @@ ejs.renderFile('src/index.ejs',{title: 'Call script prototype', issueList, scrip
 });
 
 fs.copy('admin', 'dist/admin');
+fs.copy('src/style.css', 'dist/style.css');
