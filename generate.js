@@ -58,3 +58,5 @@ ejs.renderFile('src/index.ejs',{title: 'Call script prototype', issueList, scrip
         fs.outputFile('./dist/index.html', str);
     }
 });
+
+fs.copy('admin', 'dist/admin');
