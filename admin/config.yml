@@ -28,6 +28,6 @@ collections:
         name: "issue"
         widget: 'relation'
         collection: 'issues'
-        searchFields: ['name']
-        valueField: 'name'
+        searchFields: ['title']
+        valueField: 'title'
         displayFields: ['title']
